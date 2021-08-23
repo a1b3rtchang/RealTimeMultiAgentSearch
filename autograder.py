@@ -59,6 +59,6 @@ def write_output(score_fields):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--pacman', default='myAgents2.py')
+    parser.add_argument('--pacman', default='myAgents.py')
     args = parser.parse_args()
     main(args.pacman)

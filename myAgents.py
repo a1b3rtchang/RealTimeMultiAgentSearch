@@ -291,7 +291,6 @@ def customBreadthFirstSearch(problem):
         dirList.append(act)
         
         if problem.isGoalState(succ):
-            print(i)
             return dirList
         if problem.isPacman(succ):
             followPac.append(dirList.copy())
@@ -299,7 +298,6 @@ def customBreadthFirstSearch(problem):
             closed[hash(succ)] = 1
             for triple in problem.getSuccessors(succ):
                 fringe.push((triple, dirList.copy()))
-    print(i)
     if not followPac:
         return
     followPac = max(followPac, key=lambda x: len(x))
